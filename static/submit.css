@@ -1,0 +1,28 @@
+h2{
+    font-size: 42px;
+    text-align:center;
+}
+
+body{
+    text-align: center;
+    font-size: 20px;
+}
+h1{
+    font-size: 50px;
+    text-align:center;
+}
+
+.guzik {
+    background: blue;
+    position: relative;
+    color: white;
+    font: inherit;
+    border: 2px solid #0e4f1f;
+    padding: 1 rem;
+    border-radius: 100px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.lista{
+    text-align: left;
+}

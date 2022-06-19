@@ -1,0 +1,83 @@
+input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid #999;
+  transition: 0.2s all linear;
+  margin-right: 5px;
+
+  position: relative;
+  top: 4px;
+}
+.guzik {
+    background: #0e4f1f;
+    color: white;
+    font: inherit;
+    border: 1.5px solid #0e4f1f;
+    padding: 0.5rem;
+    border-radius: 100px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.guzik2 {
+  background: #0e4f1f;
+  color: white;
+  font: inherit;
+  border: 1.5px solid #0e4f1f;
+  padding: 0.5rem;
+  border-radius: 100px;
+  font-weight: bold;
+  cursor: pointer;
+}
+input:checked {
+  border: 6px solid black;
+}
+
+text {
+  margin-right: 15px;
+  line-height: 32px;
+}
+.guz {
+
+    width: 60%;
+    background: rgb(211,240,242);
+    color: #4d5258;
+    display: block;
+    margin: 5% auto auto;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 2%;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 2;
+    font-size: 16px;
+    text-align: justify;
+}
+
+.fota{
+    background-image: url(/static/cos.jpg);
+    background-attachment: fixed;
+}
+
+h3{
+
+    text-align:center;
+    font-size: 20px;
+    padding-left: 350px;
+    padding-right: 350px;
+    background-color: rgb(211,240,242);
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1{
+    font-size: 42px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bolder;
+    text-align:center;
+    line-height: normal;
+    color: rgb(95,203,209);
+}

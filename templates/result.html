@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+        Quiz app
+    </title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='submit.css') }}" type="text/css">
+  </head>
+  <body>
+    <h1>Reguły algorytmu apriori</h1><br>
+    Zebrane wyniki przetworzono za pomocą programu Weka. Poniżej zostały przedstawione zinterpretowane dane oraz występujące między nimi najczęstsze zależności. Aby je otrzymać użyto jednego z
+    najbardziej popularnych metod wyznaczania metod asosjacyjnych algorytmu - apriori. Aplikacja wyświetliła dane w następujący sposób.
+    <br><br>
+    godziny_zasypiania=24:00-1:30 godziny_wstawania=7:00-9:00 poziom_wyspania=4 9 ==> jakosc_snu=dobra 9    conf:(1) lift:(2.11) lev:(0.06) [4] conv:(4.74)<br>
+    drzemka=nie jakosc_snu=dobra poziom_wyspania=4 8 ==> ocena=4 8    conf:(1) lift:(1.85) lev:(0.05) [3] conv:(3.68)<br><br>
+
+    <h1>Drzewa decyzyjne</h1><br>
+    Wybrane wyniki uzyskano za pomocą programu Weka. Użyto klasyfikatora J48 (w formie drzewa), który używa algorytmu C4.5 do generowania drzew. Dzieli on pierwotny zestaw danych względem każdej ze zmiennych. <br>
+    <image src="{{url_for('static', filename='drzewo1.png')}}"></image>
+    <image src="{{url_for('static', filename='drzewo2.png')}}"></image>
+
+    <h1>Wnioski</h1><br>
+    <div class="lista">
+    <ul>
+      <li>Większość ankietowanych jest w wieku 20-25</li>
+      <li>Najczęściej wybierany stopnień studiów przez ankietowanych- stopień inżynierski</li>
+      <li>Około połowa ankietowanych zgłosiła, że prowadzi aktywny tryb życia</li>
+      <li>Pytanie o szybkość przyswajania wiedzy dla większości było problematycznie </li>
+      <li>Zaledwie kilka ankietowanych zgłosiło, że ich poziom skupienia na zajęciach jest na wysokim poziomie</li>
+      <li>Najczęściej otrzymywaną oceną przez ankietowanych jest ocena dobra</li>
+      <li>Najczęstszą godziną pobudki ankietowanych jest przedział 7-9, a godzina zasypiania to 24-1:30.</li>
+      <li>Najwięcej osób zgłosiło, że ich sen trwa od 7 do 9 godzin, a jakoś ich snu jest na średnim poziomie.</li>
+      <li>Około połowa ankietowanych zgłosiła, że robi drzemki w ciągu dnia nie dłuższe niż godzinne.</li>
+      <li>Znaczna większość ankietowanych zaznaczyła, że w ciągu dnia czuje się senna</li>
+    </ul>
+    </div>
+
+
+
+  </body>
+</html>

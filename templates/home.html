@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+        Quiz app
+    </title>
+    <link rel="stylesheet" href="{{ url_for ('static', filename='style.css') }}" type="text/css">
+    <script src="check.js"></script>
+  </head>
+  <body class="fota">
+
+    <h1>Ankieta na temat wpływu snu na koncentracje studentów Politechniki Gdańskiej</h1>
+        <h3>W ramach projektu z przedmiotów
+            Rozwój Aplikacji Internetowych w Medycynie oraz Hurtownie i Eksploracja Danych
+            chcielibyśmy prosić o wypełnienie poniższej ankiety w celu zebrania danych na temat
+            wpływu snu na koncentracje studentów oraz ich wyniki w nauce.
+        </h3>
+
+    <div class="guz">
+      <form action="submit", method="POST">
+
+       <b>W jakim wieku jesteś?:</b><br><input type="radio" name="wiek" value="mniej niz 20" required>mniej niz 20<br>
+          <input type="radio" name="wiek" value="20-25" >20-25<br>
+        <input type="radio" name="wiek" value="wiecej niz 25" >wiecej niz 25<br>
+
+        <b>Jakiej jesteś płci? :</b><br><input type="radio" name="plec" value="mezczyna" required>mezczyna<br>
+             <input type="radio" name="plec" value="kobieta" >kobieta<br>
+          <input type="radio" name="plec" value="nie chce podawac" >nie chce podawac<br>
+
+        <b>Na jakim stopniu studiów jesteś?:</b> <br><input type="radio" name="stopien" value="inzynierskie" required>inzynierski<br>
+          <input type="radio" name="stopien" value="magisterskie" >magisterskie<br>
+        <input type="radio" name="stopien" value="doktoranckie" >doktoranckie<br>
+
+       <b>Na jakim wydziale na Politechnice Gdańskiej studiujesz?:</b><br><input type="radio" name="wydzial" value="WETI" required>WETI<br>
+             <input type="radio" name="wydzial" value="WTIMS" >WTIMS<br>
+        <input type="radio" name="wydzial" value="WEIA" >WEIA<br>
+        &nbsp;&nbsp;Inny&nbsp;&nbsp;<input type="text" name="wydzial" value="" ><br>
+
+        <b>Czy prowadzisz aktywny tryb życia?:</b><br><input type="radio" name="aktywny_tryb" value="nie" required>nie<br>
+             <input type="radio" name="aktywny_tryb" value="tak">tak<br>
+
+        <b>Czy szybko przyswajasz nową wiedzę?:</b><br><input type="radio" name="przyswajanie_wiedzy" value="szybko" required>szybko<br>
+             <input type="radio" name="przyswajanie_wiedzy" value="to zalezy" >to zalezy<br>
+        <input type="radio" name="przyswajanie_wiedzy" value="wolno" >wolno<br>
+
+        <b>Jak określasz swój poziom skupienia podczas wykładów?:</b><br><input type="radio" name="poziom_skupienia" value="wysoki" required>wysoki<br>
+             <input type="radio" name="poziom_skupienia" value="sredni" >sredni<br>
+          <input type="radio" name="poziom_skupienia" value="niski" >niski<br>
+
+        <b>Jaką końcową ocenę z przedmiotu otrzymujesz najczęściej?:</b><br><input type="radio" name="ocena" value="2" required>2<br>
+             <input type="radio" name="ocena" value="3" >3<br>
+        <input type="radio" name="ocena" value="4" >4<br>
+          <input type="radio" name="ocena" value="5" >5<br>
+
+        <b>Ile godzin w ciągu doby śpisz?:</b><br><input type="radio" name="ilosc_snu" value="2-4" required>2-4<br>
+          <input type="radio" name="ilosc_snu" value="5-6" >5-6<br>
+        <input type="radio" name="ilosc_snu" value="7-9" >7-9<br>
+          <input type="radio" name="ilosc_snu" value="wiecej niz 9" >wiecej niz 9<br>
+
+        <b>Ile czasu mniej więcej zajmuje Ci zasypianie?:</b><br><input type="radio" name="czas_zasypiania" value="5-10 minut" required>5-10 minut<br>
+          <input type="radio" name="czas_zasypiania" value="15-30 minut" >15-30 minut<br>
+        <input type="radio" name="czas_zasypiania" value="wiecej niz 40 minut" >wiecej niz 40 minut<br>
+
+        <b>Ile razy w ciągu jednej nocy się budzisz?:</b><br><input type="radio" name="wybudzenie" value="0-1" required>0-1<br>
+          <input type="radio" name="wybudzenie" value="2-3" >2-3<br>
+        <input type="radio" name="wybudzenie" value="wiecej niz 3 razy" required>wiecej niz 3 razy<br>
+
+        <b>O której godzinie przeważnie chodzisz spać?:</b><br><input type="radio" name="godziny_zasypiania" value="21:00-23:30" required>21:00-23:30<br>
+          <input type="radio" name="godziny_zasypiania" value="24:00-1:30" >24:00-1:30<br>
+        <input type="radio" name="godziny_zasypiania" value="2:00-3:30" >2:00-3:30<br>
+          <input type="radio" name="godziny_zasypiania" value="pozniej niz 3:30" >pozniej niz 3:40<br>
+
+        <b>O której godzinie przeważnie wstajesz?:</b><br><input type="radio" name="godziny_wstawania" value="przed 7:00" required>przed 7:00<br>
+          <input type="radio" name="godziny_wstawania" value="7:00-9:00" >7:00-9:00<br>
+        <input type="radio" name="godziny_wstawania" value="9:30-10:30" >9:30-10:30<br>
+          <input type="radio" name="godziny_wstawania" value="pozniej niz 11" >pozniej niz 11<br>
+
+        <b>Czy w ciągu dnia robisz drzemki? Jeżeli tak to jak długie?:</b><br><input type="radio" name="drzemka" value="tak, 10-20 minutowe" required>tak, 10-20 minutowe<br>
+          <input type="radio" name="drzemka" value="tak, 30-40 minutowe" >tak, 30-40 minutowe<br>
+        <input type="radio" name="drzemka" value="tak, okolo godzinne" >tak, okolo godzinne<br>
+          <input type="radio" name="drzemka" value="tak, dluzsze niz godzina" >tak, dluzsze niz godzina<br>
+          <input type="radio" name="drzemka" value="nie">nie<br>
+
+        <b>W skali od 1-10 jak określiłbyś/określiłabyś jakość swojego snu?:</b><br><input type="radio" name="jakosc_snu" value="bardzo dobra" required>bardzo dobra<br>
+          <input type="radio" name="jakosc_snu" value="dobra" >dobra<br>
+        <input type="radio" name="jakosc_snu" value="srednia" >srednia<br>
+          <input type="radio" name="jakosc_snu" value="zla" >zla<br>
+          <input type="radio" name="jakosc_snu" value="bardzo zla" >bardzo zla<br>
+
+        <b>W skali 1-6 jak bardzo czujesz się wyspany/wyspana po przebudzeniu?:</b><br><input type="radio" name="poziom_wyspania" value="1" required>1<br>
+          <input type="radio" name="poziom_wyspania" value="2" >2<br>
+        <input type="radio" name="poziom_wyspania" value="3" >3<br>
+          <input type="radio" name="poziom_wyspania" value="4" >4<br>
+          <input type="radio" name="poziom_wyspania" value="5" >5<br>
+          <input type="radio" name="poziom_wyspania" value="6" >6<br>
+
+        <b>Czy w ciągu dnia jesteś senny/senna?:</b><br><input type="radio" name="sennosc" value="nie" required>nie<br>
+          <input type="radio" name="sennosc" value="tak" >tak<br>
+
+        <br>
+        <input class="guzik" type="submit" name="submitform" value="Submit">
+
+
+    </form>
+    <form action="wyniki", method="POST">
+      <input class="guzik2" type="submit" name="submitform" value="Result">
+    </form>
+    <form action="users", method="POST">
+      <input class="guzik2" type="submit" name="submitform" value="Database">
+    </form>
+    </div>
+  </body>
+</html>
